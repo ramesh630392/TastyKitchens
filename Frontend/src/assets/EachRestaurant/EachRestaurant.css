@@ -1,0 +1,155 @@
+@media (min-width: 768px){
+    .each-item-loader{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .each-restaurant-main-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .restaurant-image-and-details{
+        display: flex;
+        flex-direction: row;
+        height: 50vh;
+        width: 100%;
+        background-image:url('https://res-console.cloudinary.com/dk3wpzwpc/media_explorer_thumbnails/9ddf5c4ea15f1c1b2b1f07c8dc5a1a97/detailed');
+        background-size: cover;
+        margin-top: 20px;
+        align-items: center;
+    }
+    .restaurant-details{
+        display: flex;
+        flex-direction: row;
+        margin-left: 180px;
+        height: 200px;
+        border: 0px solid #dddd;
+        width: 800px;
+    }
+    .restaurant-details-image{
+        height: 220px;
+        width: 470px;
+        border-radius: 10px;
+    }
+    .restaurant-details-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        margin-left: 20px;
+        height: 170px;
+        justify-content: center;
+    }
+    .restaurant-name-text{
+        color: #FFFFFF;
+        font-size: 36px;
+        font-weight: 500;
+        margin: 0cap;
+        padding: 0px;
+    }
+    .restaurant-cuisine-text{
+        color: #FFFFFF;
+        font-size: 18px;
+        font-weight: 100;
+        margin: 0cap;
+        padding: 0px;
+    }
+    .restaurant-open-text{
+        color: #ddd;
+        font-size: 18px;
+        font-weight: 100;
+        margin: 0cap;
+        padding: 0px;
+    }
+    .rating-container{
+        display: flex;
+        flex-direction: row;
+    }
+    .star-icon-white{
+        color: #ddd;
+        padding-top: 5px;
+        font-size: 15px;
+    }
+    .details-rating{
+        color: #ddd;
+        font-weight: 500;
+        padding-top: 0px;
+        margin: 0px;
+    }
+    .details-reviews{
+        color: #ddd;
+        font-weight: 200;
+        padding-top: 0%;
+        margin: 0px;
+        font-size: 13px;
+    }
+    .separator{
+      color: #ddd;
+      margin: 0%;
+      padding: 0%;
+      margin-left: 10px;
+      line-height: 0.9;
+      margin-right: 10px;
+    }
+    .food-items-container{
+        display: flex;
+        flex-direction: column;
+        border: solid 0px #000;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 100vh;
+        margin-top: 20px;
+    }
+    .grid-container2 {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(150px, 1fr)); 
+        gap: 20px;
+    }
+    .each-item {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        border: 0px solid #ddd;
+        height: 120px;
+    }
+    .food-item-image{
+        height: 120px;
+        width: 180px;
+        border-radius: 10px;
+        margin-right: 0%;
+    }
+    .restaurant-details-container-food-items{
+        display: flex;
+        flex-direction: column;
+        height: 110px;
+        border: 0px solid red;
+        width: 230px;
+        margin-left: 5px;
+        margin-top: auto;
+        margin-bottom: auto;
+        gap: 10px;
+        justify-content: center;
+    }
+    .button-add{
+       background: 2px solid gold;
+       border-radius: 6px;
+       background-color: transparent;
+       color: gold;
+       border-color: goldenrod;
+       width: 50px;
+    }
+
+    .control-buttons{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+    .button-plus{
+        height: 20px;
+    }
+    .item-count-text{
+        margin: 0%;
+    }
+    
+}

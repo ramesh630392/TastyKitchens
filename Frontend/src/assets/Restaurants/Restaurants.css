@@ -1,0 +1,153 @@
+*{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;;
+}
+@media (min-width: 768px){
+    .restaurants-main-container{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .restaurant-text-heading{
+        font-weight: 700;
+        font-size: 32px;
+        color: #183B56;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        padding-left: 0%;
+        padding-bottom: 0px;
+        margin-bottom: 0%;
+        margin-left: 0%;
+    }
+    .restaurant-text-para{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #64748B;
+    }
+    .filter-container1{
+        display: flex;
+        flex-direction: row;
+    }
+    .filter-main-container{
+        display: flex;
+        flex-direction: row;
+        margin-left: auto;
+    }
+    .filter-icon{
+        font-size: 30px;
+        margin-right: 2px;
+        margin-top: 5px;
+        color: #64748B;
+    }
+    .select-filter{
+        height: 20px;
+        border-width: 0px;
+        background-color: transparent;
+        font-size: 18px;
+        color: #64748B;
+        margin-top: 5px;
+    }
+    .select-label{
+        color: #64748B;
+        font-size: 18px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        margin-left: 10px;
+        margin-right: 2px;
+        margin-top: 5px;
+    }
+    .each-item-container{
+        flex: 1; 
+        text-align: center;
+        padding: 20px;
+        background-color: lightcoral;
+        border: 0px solid #ddd;
+        width: 400px;
+        height: 100px;
+    }
+    
+    .flex-container {
+        display: flex;
+        justify-content: space-between; /* Evenly distribute elements */
+        gap: 10px;
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(150px, 1fr)); 
+        gap: 20px;
+    }
+      
+    .item {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        border: 0px solid #df1111;
+        height: 120px;
+    }
+    .restaurant-image{
+        height: 120px;
+        width: 180px;
+        border-radius: 10px;
+        margin: 0px;
+    }
+    .restaurant-details-container1{
+        display: flex;
+        flex-direction: column;
+        margin-top: 5px;
+        margin-left: 10px;
+        border: 0px solid #000000;
+        height: 110px;
+        width: 170px;
+        justify-content: center;
+        gap: 10px;
+    }
+    .restaurant-name{
+        color: #334155;
+        font-weight: 700;
+        font-size: 18px;
+        font-style: DM sans;
+        text-align: left;
+        margin: 0%;
+    }
+    .restaurant-cuisine{
+        color: #334155;
+        font-weight: 700;
+        font-size: 14px;
+        font-style: DM sans;
+        text-align: left;
+        margin: 0%;
+    }
+    .golden-star{
+        color: gold;
+        text-align: left;
+        margin: 0%;
+    }
+    .rate-text{
+        text-align: left;
+        margin: 0%;
+    }
+    
+}
+
+
+.pagination-buttons-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.pagination-text{
+    color: #334155;
+    font-weight: 500;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.pagination-button-last{
+    background-color: #334155;
+    color: #ddd;
+}
