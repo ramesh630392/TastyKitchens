@@ -7,6 +7,7 @@ import { FaAngleDoubleRight } from "react-icons/fa";
 import { FaAngleDoubleLeft } from "react-icons/fa";
 import { BsFilterLeft } from "react-icons/bs";
 import { Footer } from '../Footer/Footer';
+import gsap from 'gsap';
 
 export const Restaurants = () => {
 
@@ -58,6 +59,10 @@ export const Restaurants = () => {
 
   useEffect(()=>{
    getRestaurants();
+   gsap.to('#restaurant-text', {opacity:1, delay:1});
+   gsap.to('#container2', {opacity:1, delay:1.5});
+   gsap.to('#horizontal_line', {opacity:1, delay:2});
+   gsap.to('.pagination-buttons-container', {opacity: 1, delay:4})
   },[]);
 
   const onChangeFilter = (e) =>{
@@ -67,10 +72,9 @@ export const Restaurants = () => {
 
   const EachItem = (eachItem) =>{
     const {id, name, cuisine,user_rating, image_url} = eachItem.eachItem;
-    console.log(user_rating)
 
     return (
-        <Link to={`restaurant/${id}`} >
+        <Link to={`restaurant/${id}`} style ={{textDecoration:"none", color: "inherit"}} >
         <div className='item' >
                 <img src ={image_url} className='restaurant-image' alt ="Restaurant-image" />
                 <div className='restaurant-details-container1' >
@@ -86,8 +90,8 @@ export const Restaurants = () => {
 
   return (
     <div className='restaurants-main-container' >
-        <h1 className='restaurant-text-heading' >Popular Restaurants</h1>
-        <div className='filter-container1' >
+        <h1 className='restaurant-text-heading' id ='restaurant-text' >Popular Restaurants</h1>
+        <div className='filter-container1' id = 'container2' >
             <p className='restaurant-text-para'>Select Your favourite restaurant special dish and make your day happy..</p>
             <div className='filter-main-container' >
               <BsFilterLeft className='filter-icon' />
@@ -98,7 +102,7 @@ export const Restaurants = () => {
               </select>
             </div>
         </div>
-        <hr style={{width:"100%", marginTop: "0px", marginBottom: "30px"}} />
+        <hr id = 'horizontal_line' style={{width:"100%", marginTop: "0px", marginBottom: "30px" , opacity:'0'}} />
         <div className='grid-container' >
             {restaurants.map((eachItem, index)=>(<EachItem eachItem = {eachItem} key = {index} />))}
         </div>

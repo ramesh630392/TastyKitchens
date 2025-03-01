@@ -33,6 +33,7 @@
         margin-right: 10px;
         font-family: DM sans;
         font-size: 20px;
+        opacity: 0;
     }
     .link-cart{
         color: #334155;
@@ -40,6 +41,7 @@
         margin-right: 10px;
         font-family: DM sans;
         font-size: 20px;
+        opacity: 0;
     }
     .button-logout{
         background-color: #F7931E;
@@ -51,6 +53,7 @@
         line-height: 10px;
         margin-top: auto;
         margin-bottom: auto;
+        opacity: 0;
     }
 
     .ham-button-container{

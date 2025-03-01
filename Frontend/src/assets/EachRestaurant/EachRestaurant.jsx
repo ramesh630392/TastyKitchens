@@ -9,14 +9,13 @@ import { BsCurrencyRupee } from "react-icons/bs";
 import { CartContext } from '../CartContext/Context';
 import { Footer } from '../Footer/Footer';
 
+
 const EachRestaurant = () => {
   const [items, setItems] = useState([]);
   const [isLoading, setLoading] = useState(true);
   const [restaurantData, setData] = useState({});
   const [button, setButton] = useState(true);
   
-  const array = [{id:1}]
-  console.log(items)
 
   
   const id = useParams();
@@ -81,13 +80,14 @@ const EachRestaurant = () => {
 
   useEffect(()=>{
     getRestaurantItems();
+    
   },[]);
 
   return (
     <>
     <Navbar/>
     {isLoading? <div className='each-item-loader' > <Loader/> </div> : <div className='each-restaurant-main-container' >
-        <div className='restaurant-image-and-details'>
+        <div className='restaurant-image-and-details' id ='details'>
             <div className='restaurant-details' >
                 <img src ={restaurantData.image_url} className='restaurant-details-image' alt = "restaurant-food" />
                 <div className='restaurant-details-container' >
@@ -111,7 +111,7 @@ const EachRestaurant = () => {
                 </div>
             </div>
         </div>
-        <div className='food-items-container' >
+        <div className='food-items-container'  id ="items" >
             <div className='grid-container2' >
                 {items.map((eachItem, index)=>(<div key={index} className='each-item' >
                     <img src ={eachItem.image_url} className='food-item-image' alt ="item-image" />

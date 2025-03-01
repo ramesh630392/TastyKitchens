@@ -19,6 +19,7 @@
         padding-bottom: 0px;
         margin-bottom: 0%;
         margin-left: 0%;
+        opacity: 0;
     }
     .restaurant-text-para{
         font-weight: 500;
@@ -29,6 +30,7 @@
     .filter-container1{
         display: flex;
         flex-direction: row;
+        opacity: 0;
     }
     .filter-main-container{
         display: flex;
@@ -140,6 +142,7 @@
     align-items: center;
     margin-left: auto;
     margin-right: auto;
+    opacity: 0;
 }
 .pagination-text{
     color: #334155;

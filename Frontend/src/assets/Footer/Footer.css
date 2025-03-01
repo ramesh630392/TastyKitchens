@@ -11,6 +11,7 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
+        opacity: 0;
     }
     .app-icon-footer{
         height: 50px;
@@ -31,6 +32,7 @@
         font-family: DM sans;
         margin: 0%;
         text-align: center;
+        opacity: 0;
     }
     .icons-container-footer{
         display: flex;
@@ -42,6 +44,7 @@
     .icon-white-footer{
         color: #FFFFFF;
         font-size: 30px;
+        opacity: 0;
 
     }
 }

@@ -110,20 +110,19 @@
         justify-content: center;
         height: 80vh;
     }
-    .tick-image{
-        height: 100px;
-        width: 100px;
-    }
+    
     .payment-text1{
         color: #1E293B;
         font-size: 24px;
         text-align: center;
+        margin: 0px;
     }
     .payment-text2{
         color: #1E293B;
         font-size: 18px;
         text-align: center;
         margin: 0%;
+        margin-top: 5px;
     }
     .button-to-home{
         background-color: #FFA412;
@@ -143,11 +142,13 @@
     .no-orders-image{
         height: 250px;
         width: 250px;
+        opacity: 0;
     }
     .no-order-text1{
         color: #1E293B;
         font-size: 32px;
         font-weight: 500;
+        opacity: 0;
     }
     .no-order-text2{
         color: #1E293B;
@@ -155,5 +156,17 @@
         font-weight: 500;
         margin: 0px;
         margin-bottom: 20px;
+        opacity: 0;
+    }
+    .button-to-home-no_orders{
+        background-color: #FFA412;
+        color: #FFFFFF;
+        border-radius: 6px;
+        border-width: 0cap;
+        padding: 5px;
+        margin-top: 10px;
+        opacity: 0;
     }
 }
+
+

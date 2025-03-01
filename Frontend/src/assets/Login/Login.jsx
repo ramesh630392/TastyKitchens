@@ -1,8 +1,9 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import "./Login.css";
 import { AppLogo } from '../Svg/AppLogo';
 import { useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie'
+import gsap from 'gsap';
 
 export const Login = () => {
     const [username, setUsername] = useState('');
@@ -10,6 +11,7 @@ export const Login = () => {
     const [usernameErr, setUsernameErr] = useState('');
     const [passwordErr, setPasswordErr] = useState('');
     const [errMsg, setErrMsg] = useState('');
+    const inputRef = useRef(null);
 
     const navigate = useNavigate();
     const navigateRoute = () =>{
@@ -21,7 +23,12 @@ export const Login = () => {
     };
     useEffect(()=>{
         navigateRoute();
+        gsap.to('#login-submit_button', {opacity:1, delay:0.7})
     },[]);
+
+    useRef(()=>{
+        inputRef.current.focus()
+    },[])
 
     const submitForm = async(event) =>{
         event.preventDefault();
@@ -37,7 +44,6 @@ export const Login = () => {
                     const data = await response.json();
                     Cookies.set("jwtToken", data.jwt_token, {expires: 1});
                     navigateRoute();
-                    console.log(data);
                 }
             }catch(err){
                 console.log(err.message)
@@ -57,14 +63,14 @@ export const Login = () => {
                 <p className='login-text' >Login</p>
                 </div>
                 <form onSubmit={submitForm} >
-                    <label htmlFor ="username">USERNAME</label>
-                    <input type='text'  placeholder='Username..'  id="username" onChange={(e)=>{setUsername(e.target.value)}} onBlur={(e)=>{e.target.value===""?setUsernameErr('Required'):setUsernameErr('')}} />
+                    <label htmlFor ="username" className='label'  id='username-label' >USERNAME</label>
+                    <input href={inputRef} type='text'  placeholder='Username..'  id="username" onChange={(e)=>{setUsername(e.target.value)}} onBlur={(e)=>{e.target.value===""?setUsernameErr('Required'):setUsernameErr('')}} />
                     <p className='err-text'>{usernameErr}</p>
-                    <label htmlFor='password' >PASSWORD</label>
+                    <label htmlFor='password' className='label' id = 'password-label' >PASSWORD</label>
                     <input type='password' placeholder='Password..' id= "password" onChange={(e)=>{setPassword(e.target.value)}} onBlur={(e)=>{e.target.value===""?setPasswordErr('Required'):setPasswordErr('')}} />
                     <p  className='err-text'>{passwordErr}</p>
                     <p>{errMsg}</p>
-                    <button type='submit' onClick={submitForm}  className='submit-button' >Submit</button>
+                    <button type='submit' onClick={submitForm} id = 'login-submit_button' className='submit-button' >Submit</button>
                 </form>
             </div>
         </div>
